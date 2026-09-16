@@ -1,0 +1,954 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #222;
+    background: #fff;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+    width: 90%;
+    margin: 25px auto;
+
+    padding: 18px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 16px;
+
+    position: absolute;
+
+    top: 0;
+    left: 5%;
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: white;
+
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    gap: 45px;
+}
+
+nav ul li a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+.nav-btn {
+    text-decoration: none;
+
+    background: white;
+
+    color: black;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   HERO BACKGROUND IMAGE
+========================================= */
+
+.hero-background {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   HERO DARK OVERLAY
+========================================= */
+
+.hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.65)
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding-top: 100px;
+
+    padding-bottom: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 9px 18px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 50px;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+}
+
+.hero-content h1 {
+    color: white;
+
+    font-size: 72px;
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    display: block;
+}
+
+.hero-content p {
+    color: #ececec;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-bottom: 45px;
+
+    max-width: 700px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons {
+    display: flex;
+
+    gap: 20px;
+}
+
+.primary {
+    background: white;
+
+    color: black;
+
+    text-decoration: none;
+
+    padding: 18px 35px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.secondary {
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    padding: 18px 35px;
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features {
+    padding: 110px 10%;
+
+    background: #f5f7fa;
+}
+
+.section-header {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+}
+
+.section-header span {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #666;
+}
+
+.features h2 {
+    font-size: 42px;
+
+    margin: 12px 0 15px;
+}
+
+.section-header p {
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 35px;
+}
+
+.card {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08);
+
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.card-number {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #888;
+
+    margin-bottom: 30px;
+}
+
+.card h3 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TRACK SECTION
+========================================= */
+
+.track-section {
+    padding: 110px 10%;
+
+    background: white;
+
+    text-align: center;
+}
+
+.track-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.track-content > span {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #666;
+}
+
+.track-content h2 {
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin: 15px 0 20px;
+}
+
+.track-content p {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   TRACK BOX
+========================================= */
+
+.track-box {
+    display: flex;
+
+    gap: 10px;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+.track-box input {
+    flex: 1;
+
+    padding: 17px 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 50px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+.track-box input:focus {
+    border-color: #888;
+}
+
+.track-box button {
+    padding: 17px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #222;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.track-box button:hover {
+    transform: translateY(-2px);
+}
+
+#trackingResult {
+    margin-top: 25px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 60px 10%;
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 25px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+
+    margin-bottom: 10px;
+}
+
+footer .copyright {
+    font-size: 13px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   REPORT PAGE
+========================================= */
+
+.report-page {
+    min-height: 100vh;
+
+    background: #f5f7fa;
+
+    padding-bottom: 80px;
+}
+
+.report-header {
+    background: #111;
+
+    padding: 30px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.report-header .logo {
+    color: white;
+}
+
+.back-link {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   REPORT CONTAINER
+========================================= */
+
+.report-container {
+    width: 90%;
+
+    max-width: 850px;
+
+    margin: 60px auto;
+}
+
+.report-title {
+    margin-bottom: 40px;
+}
+
+.report-title span {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #777;
+}
+
+.report-title h1 {
+    font-size: 45px;
+
+    margin: 12px 0;
+}
+
+.report-title p {
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   REPORT FORM
+========================================= */
+
+.report-form {
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 15px 17px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #888;
+}
+
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* =========================================
+   IMAGE UPLOAD
+========================================= */
+
+.image-upload {
+    border: 2px dashed #ccc;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.image-upload:hover {
+    border-color: #777;
+
+    background: #fafafa;
+}
+
+.image-upload p {
+    color: #777;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+}
+
+#imagePreview {
+    max-width: 100%;
+
+    max-height: 300px;
+
+    margin-top: 20px;
+
+    border-radius: 12px;
+
+    display: none;
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.location-box {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
+.location-status {
+    padding: 15px;
+
+    background: #f5f5f5;
+
+    border-radius: 12px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    flex: 1;
+}
+
+.location-btn {
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #222;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.submit-btn {
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #111;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.success-message {
+    display: none;
+
+    background: #f1f8f3;
+
+    border: 1px solid #c8e6d0;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.success-message h3 {
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    color: #555;
+
+    line-height: 1.6;
+}
+
+.report-id {
+    font-weight: 700;
+
+    margin-top: 15px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 20px;
+
+        position: absolute;
+    }
+
+    nav ul {
+        gap: 25px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .report-title h1 {
+        font-size: 38px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        width: 94%;
+
+        left: 3%;
+
+        padding: 18px;
+    }
+
+    nav ul {
+        gap: 15px;
+
+        font-size: 14px;
+    }
+
+    .nav-btn {
+        padding: 11px 20px;
+    }
+
+    .hero-content {
+        width: 88%;
+
+        padding-top: 180px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .features,
+    .track-section {
+        padding: 80px 7%;
+    }
+
+    .features h2,
+    .track-content h2 {
+        font-size: 34px;
+    }
+
+    .report-form {
+        padding: 25px;
+    }
+
+    .report-container {
+        width: 94%;
+    }
+
+    .location-box {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .track-box {
+        flex-direction: column;
+    }
+
+    .track-box button {
+        width: 100%;
+    }
+}

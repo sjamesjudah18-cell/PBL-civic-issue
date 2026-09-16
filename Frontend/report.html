@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Report an Issue | GovConnect</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <div class="report-page">
+
+
+        <!-- HEADER -->
+
+        <header class="report-header">
+
+            <div class="logo">
+                GovConnect
+            </div>
+
+            <a
+                href="index.html"
+                class="back-link"
+            >
+                ← Back to Home
+            </a>
+
+        </header>
+
+
+        <!-- MAIN -->
+
+        <main class="report-container">
+
+
+            <div class="report-title">
+
+                <span>
+                    REPORT A CIVIC ISSUE
+                </span>
+
+                <h1>
+                    Tell us what's wrong.
+                </h1>
+
+                <p>
+                    Upload a photo, describe the problem,
+                    and provide the location. We'll take it
+                    from there.
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form
+                class="report-form"
+                id="reportForm"
+            >
+
+
+                <!-- IMAGE -->
+
+                <div class="form-group">
+
+                    <label>
+                        Photo of the Issue
+                    </label>
+
+                    <div
+                        class="image-upload"
+                        onclick="document.getElementById('issueImage').click()"
+                    >
+
+                        <strong>
+                            Click to upload an image
+                        </strong>
+
+                        <p>
+                            JPG, PNG or JPEG
+                        </p>
+
+                        <input
+                            type="file"
+                            id="issueImage"
+                            accept="image/*"
+                            hidden
+                        >
+
+                        <img
+                            id="imagePreview"
+                            alt="Image Preview"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ISSUE TYPE -->
+
+                <div class="form-group">
+
+                    <label for="issueType">
+                        Issue Type
+                    </label>
+
+                    <select id="issueType">
+
+                        <option value="">
+                            Select issue type
+                        </option>
+
+                        <option value="pothole">
+                            Pothole / Road Damage
+                        </option>
+
+                        <option value="garbage">
+                            Garbage / Sanitation
+                        </option>
+
+                        <option value="streetlight">
+                            Broken Streetlight
+                        </option>
+
+                        <option value="water">
+                            Water Leakage
+                        </option>
+
+                        <option value="footpath">
+                            Damaged Footpath
+                        </option>
+
+                        <option value="tree">
+                            Fallen Tree
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Describe the Problem
+                    </label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Example: There is a large pothole near the main road which is dangerous for vehicles."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="form-group">
+
+                    <label>
+                        Location
+                    </label>
+
+                    <div class="location-box">
+
+                        <div
+                            class="location-status"
+                            id="locationStatus"
+                        >
+                            Location not captured
+                        </div>
+
+                        <button
+                            type="button"
+                            class="location-btn"
+                            onclick="getLocation()"
+                        >
+                            Get Location
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LATITUDE / LONGITUDE -->
+
+                <input
+                    type="hidden"
+                    id="latitude"
+                >
+
+                <input
+                    type="hidden"
+                    id="longitude"
+                >
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit Report
+                </button>
+
+
+                <!-- SUCCESS -->
+
+                <div
+                    class="success-message"
+                    id="successMessage"
+                >
+
+                    <h3>
+                        Report Submitted Successfully
+                    </h3>
+
+                    <p>
+                        Your civic issue has been recorded.
+                        Keep your report ID to track its status.
+                    </p>
+
+                    <div
+                        class="report-id"
+                        id="reportId"
+                    ></div>
+
+                </div>
+
+
+            </form>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/api.js"></script>
+
+    <script src="js/report.js"></script>
+
+</body>
+
+</html>

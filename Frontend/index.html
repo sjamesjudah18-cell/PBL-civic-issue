@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GovConnect | Building Better Cities Together</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            GovConnect
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="report.html">Report</a>
+            </li>
+
+            <li>
+                <a href="#track">Track</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+        </ul>
+
+        <a href="report.html" class="nav-btn">
+            Get Started
+        </a>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <!-- BACKGROUND IMAGE -->
+        <img
+            src="Frontend/assets/images/background.png"
+            alt="City road"
+            class="hero-background"
+        >
+
+        <!-- DARK OVERLAY -->
+        <div class="hero-overlay"></div>
+
+
+        <!-- HERO CONTENT -->
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                Smart Civic Issue Reporting
+            </div>
+
+            <h1>
+                Building Better
+                <span>Cities Together.</span>
+            </h1>
+
+            <p>
+                Report potholes, damaged roads, water leakage,
+                sanitation problems, broken streetlights and
+                other civic issues directly to the responsible
+                government department.
+            </p>
+
+            <div class="buttons">
+
+                <a href="report.html" class="primary">
+                    Report an Issue
+                </a>
+
+                <a href="#about" class="secondary">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features" id="about">
+
+        <div class="section-header">
+
+            <span>
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Why GovConnect?
+            </h2>
+
+            <p>
+                A simple way for citizens to report problems
+                and help authorities build better communities.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <!-- CARD 1 -->
+
+            <div class="card">
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <h3>
+                    Easy Reporting
+                </h3>
+
+                <p>
+                    Report a civic problem by simply uploading
+                    a photo and adding a short description.
+                    No complicated registration process.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="card">
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <h3>
+                    Live Tracking
+                </h3>
+
+                <p>
+                    Track your complaint from the moment it is
+                    submitted until the responsible department
+                    resolves the issue.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="card">
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <h3>
+                    Location Based
+                </h3>
+
+                <p>
+                    Your location can be captured automatically
+                    so authorities know exactly where the civic
+                    problem exists.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TRACK SECTION ================= -->
+
+    <section class="track-section" id="track">
+
+        <div class="track-content">
+
+            <span>
+                TRACK YOUR REPORT
+            </span>
+
+            <h2>
+                Know what's happening
+                with your complaint.
+            </h2>
+
+            <p>
+                Enter your complaint ID to check the current
+                status of your civic issue.
+            </p>
+
+
+            <div class="track-box">
+
+                <input
+                    type="text"
+                    id="trackingInput"
+                    placeholder="Enter Report ID"
+                >
+
+                <button onclick="trackReport()">
+                    Track
+                </button>
+
+            </div>
+
+
+            <div id="trackingResult"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            GovConnect
+        </div>
+
+        <p>
+            Building better cities together.
+        </p>
+
+        <p class="copyright">
+            © 2026 GovConnect. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
